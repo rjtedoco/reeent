@@ -42,7 +42,8 @@ const Modal = ({
 
     setShowModal(false);
     setTimeout(() => {}, 300);
-  }, [disabled]);
+    onClose();
+  }, [disabled, onClose]);
 
   const handleSubmit = useCallback(() => {
     if (disabled) return;
